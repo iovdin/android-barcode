@@ -1,4 +1,5 @@
 bin/
 gen/
 .classpath
-.project
+.projectlocal.properties
+local.properties

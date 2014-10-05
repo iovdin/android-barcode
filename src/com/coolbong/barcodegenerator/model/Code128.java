@@ -167,14 +167,14 @@ public class Code128 {
 		
 		bgPaint.setColor(Color.BLACK);
         
-        int size = (int)(26 * scale);
+        int size = (int)(16 * scale);
 		
         bgPaint.setTextSize(size);
 
-        String str = insertSpace(data);
+        String str = data;//insertSpace(data);
         
         bgPaint.setTextAlign(Paint.Align.CENTER);
-        canvas.drawText(str, width/2, (height - 10), bgPaint);
+        canvas.drawText(str, width/2, height - (scale * 5) , bgPaint);
 		
 		return bitmap;
 	}
