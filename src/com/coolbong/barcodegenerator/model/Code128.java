@@ -120,12 +120,15 @@ public class Code128 {
 	
 	
 	public Bitmap getBitmap( int width, int height) {
+		Resources resources = context.getResources();
+		float scale = resources.getDisplayMetrics().density;
+
 		byte[] code = encode();
 		if(code == null) { 
 			return null;
 		}
 		int TOP_GAP = 30;
-		int BOTTOM_GAP = 60;
+		int BOTTOM_GAP = 30;
 		int inputWidth = code.length;
 		// Add quiet zone on both sides
 		int fullWidth = inputWidth + (6);
@@ -162,10 +165,8 @@ public class Code128 {
 		}
 		
 		
-		Resources resources = context.getResources();
-		float scale = resources.getDisplayMetrics().density;
 		
-		bgPaint.setColor(Color.BLACK);
+		/*bgPaint.setColor(Color.BLACK);
         
         int size = (int)(16 * scale);
 		
@@ -174,7 +175,7 @@ public class Code128 {
         String str = data;//insertSpace(data);
         
         bgPaint.setTextAlign(Paint.Align.CENTER);
-        canvas.drawText(str, width/2, height - (scale * 5) , bgPaint);
+        canvas.drawText(str, width/2, height - (scale * 5) , bgPaint);*/
 		
 		return bitmap;
 	}

@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" 
-    android:background="#00000000"
+    android:background="#FFFFFF"
     >
 
     <!--<View
@@ -13,8 +13,8 @@
 
     <ImageView
         android:id="@+id/barcode"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"/>
 

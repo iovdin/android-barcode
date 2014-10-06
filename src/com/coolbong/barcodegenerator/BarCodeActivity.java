@@ -46,6 +46,8 @@ public class BarCodeActivity extends Activity {
             appWidgetIds = appWidgetManager.getAppWidgetIds(widgetComponent);
         }
 
+        //325 24 73
+
         updateBarcode(barcode, this, appWidgetManager, appWidgetIds);
 
         Intent resultValue = new Intent();
@@ -57,7 +59,7 @@ public class BarCodeActivity extends Activity {
     public static void updateBarcode(String barcode, Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         Code128 code = new Code128(context);
         code.setData(barcode);
-        Bitmap bitmap = code.getBitmap(1000, 400);
+        Bitmap bitmap = code.getBitmap(800, 500);
 
         final int N = appWidgetIds.length;
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget);
